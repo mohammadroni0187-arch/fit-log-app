@@ -26,80 +26,30 @@ const WorkoutActions = ({ workout }: WorkoutActionsProps) => {
   const handleAddToPlan = () => {
     if (workPlan.some((item) => item.id === workout.id)) {
     
-      toast.error("This workout is already in your plan!", {
-position: "top-right",
-autoClose: 5000,
-hideProgressBar: false,
-closeOnClick: false,
-pauseOnHover: true,
-draggable: true,
-progress: undefined,
-theme: "dark",
-transition: Bounce,
-});
+      toast.error("This workout is already in your plan!")
       
       return;
     }
 
     if (workPlan.length >= 5) {
-      toast.info("You can add maximum 5 workouts!", {
-position: "top-right",
-autoClose: 5000,
-hideProgressBar: false,
-closeOnClick: false,
-pauseOnHover: true,
-draggable: true,
-progress: undefined,
-theme: "dark",
-transition: Bounce,
-});
+      toast.info("You can add maximum 5 workouts!");
       return;
     }
 
     setWorkPlan((previous) => [...previous, workout]);
 
-toast.success("Workout added to today's plan!", {
-position: "top-right",
-autoClose: 5000,
-hideProgressBar: false,
-closeOnClick: false,
-pauseOnHover: true,
-draggable: true,
-progress: undefined,
-theme: "dark",
-transition: Bounce,
-});
+toast.success("Workout added to today's plan!");
   };
 
   const handleSaveForLater = () => {
     if (saveWork.some((item) => item.id === workout.id)) {
-      toast.error("This workout is already saved!", {
-position: "top-right",
-autoClose: 5000,
-hideProgressBar: false,
-closeOnClick: false,
-pauseOnHover: true,
-draggable: true,
-progress: undefined,
-theme: "dark",
-transition: Bounce,
-});
+      toast.error("This workout is already saved!");
       return;
     }
 
     setSaveWork((previous) => [...previous, workout]);
 
-    toast.success("Workout saved for later!", {
-position: "top-right",
-autoClose: 5000,
-hideProgressBar: false,
-closeOnClick: false,
-pauseOnHover: true,
-draggable: true,
-progress: undefined,
-theme: "dark",
-transition: Bounce,
-});
+    toast.success("Workout saved for later!");
     
   };
 
