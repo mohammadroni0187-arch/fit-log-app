@@ -1,13 +1,23 @@
 
 "use client";
 
-import React from "react";
+import React, { useContext } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import logo from "@/assets/logo.png";
+import { FitLogContext } from "@/context/FitLogProvider";
 
 const Navber = () => {
+  const context = useContext(FitLogContext);
+
+if (!context) return null;
+
+const { workPlan, saveWork } = context;
+
   return (
+
+
+
     <div className="navbar bg-black text-white shadow-sm px-4 p-6 md:px-8 border-b border-gray-600">
 
     
@@ -60,14 +70,14 @@ const Navber = () => {
         
         <Link href="/my-plan">
           <div className="badge bg-[#ccff00] text-black border-none px-4 py-4 font-bold">
-            Plan <span className="ml-1">0</span>
+            Plan <span className="ml-1">{workPlan.length}</span>
           </div>
         </Link>
 
         
         <Link href="/my-plan">
           <div className="badge bg-transparent text-white border border-[#ccff00] px-4 py-4 font-bold">
-            Saved <span className="ml-1">0</span>
+            Saved <span className="ml-1">{saveWork.length}</span>
           </div>
         </Link>
 
