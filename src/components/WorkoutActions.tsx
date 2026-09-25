@@ -4,7 +4,7 @@ import React, { useContext } from "react";
 
 import { IWorkout } from "@/type/workout.type";
 import { FitLogContext } from "@/context/FitLogProvider";
-import { Bounce, toast } from "react-toastify";
+import {  toast } from "react-toastify";
 
 
 interface WorkoutActionsProps {
