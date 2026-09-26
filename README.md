@@ -1,36 +1,163 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# FitLog
 
-## Getting Started
+FitLog is a modern workout management web application built with Next.js, TypeScript, Tailwind CSS, and DaisyUI. It allows users to explore workouts, view workout details, add exercises to their daily plan, save workouts for later, and track completed exercises.
 
-First, run the development server:
+
+## GitHub Repository
+
+[(https://github.com/mohammadroni0187-arch/fit-log-app)]
+
+## Features
+
+* Browse a collection of workouts
+* View detailed information about each workout
+* Add workouts to today's plan
+* Maximum of 5 workouts can be added to a daily plan
+* Save workouts for later
+* Remove workouts from the plan or saved list
+* Mark workouts as completed
+* Track total exercises, duration, and calories
+* Sort workouts by duration, calories, and rating
+* Responsive design for mobile, tablet, and desktop
+* Toast notifications for user actions
+* Custom 404 page for invalid routes
+* Loading animation while workout data is loading
+
+## Technologies Used
+
+* Next.js
+* React
+* TypeScript
+* Tailwind CSS
+* DaisyUI
+* React Toastify
+* REST API
+
+## Main Pages
+
+### Home
+
+The home page contains:
+
+* Navigation bar
+* Hero section
+* Workout library
+* Workout cards
+* Responsive layout
+
+### Workout Details
+
+Users can view:
+
+* Workout image
+* Workout name
+* Description
+* Muscle groups
+* Equipment
+* Difficulty
+* Sets and reps
+* Duration
+* Calories
+* Rating
+* Workout instructions
+
+Users can also add a workout to their plan or save it for later.
+
+### My Plan
+
+The My Plan page allows users to:
+
+* View today's workout plan
+* View saved workouts
+* See total exercises
+* See total duration
+* See total calories
+* Sort workouts
+* Mark workouts as completed
+* Remove workouts
+
+## API
+
+This project uses the FitLog workout API to fetch workout data.
+
+API Endpoint:
+
+`https://api.api-store.workers.dev/api/fitlog`
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone YOUR_GITHUB_REPOSITORY_URL
+```
+
+Go to the project directory:
+
+```bash
+cd fit-log-app
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open the application in your browser:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project Structure
 
-## Learn More
+```text
+src/
+├── app/
+│   ├── my-plan/
+│   ├── workouts/
+│   ├── not-found.tsx
+│   ├── loading.tsx
+│   ├── page.tsx
+│   └── layout.tsx
+│
+├── components/
+│   ├── Banner.tsx
+│   ├── Footer.tsx
+│   ├── Navber.tsx
+│   ├── WorkoutCard.tsx
+│   ├── WorkoutActions.tsx
+│   └── Workouts.tsx
+│
+├── context/
+│   └── FitLogProvider.tsx
+│
+└── type/
+    └── workout.type.ts
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Responsive Design
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+FitLog is designed to work across different screen sizes:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+* Mobile
+* Tablet
+* Laptop
+* Desktop
 
-## Deploy on Vercel
+## Author
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Md. Roni**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Frontend Developer | React.js | Next.js | TypeScript
+
+GitHub: [(https://github.com/mohammadroni0187-arch)]
+
+LinkedIn: [(https://www.linkedin.com/in/md-roni-2034733a2/)]
