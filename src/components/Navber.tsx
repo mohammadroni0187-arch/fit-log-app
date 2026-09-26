@@ -69,14 +69,14 @@ const { workPlan, saveWork } = context;
 
         
         <Link href="/my-plan">
-          <div className="badge bg-[#ccff00] text-black border-none px-4 py-4 font-bold">
-            Plan <span className="ml-1">{workPlan.length}</span>
+          <div className="badge bg-black text-white border-none px-4 py-4 font-bold">
+            Plan <span className="bg-[#ccff00] border rounded-xl text-black  ml-1">{workPlan.length}</span>
           </div>
         </Link>
 
         
         <Link href="/my-plan">
-          <div className="badge bg-transparent text-white border border-[#ccff00] px-4 py-4 font-bold">
+          <div className="badge bg-transparent text-white  border-none px-4 py-4 font-bold">
             Saved <span className="ml-1">{saveWork.length}</span>
           </div>
         </Link>
