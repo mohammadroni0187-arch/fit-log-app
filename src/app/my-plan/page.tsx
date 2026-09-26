@@ -21,38 +21,28 @@ const MyPlanPage = () => {
     setSaveWork,
   } = context;
 
-  // =========================
-  // TAB STATE
-  // =========================
+ 
 
   const [activeTab, setActiveTab] = useState<"plan" | "saved">("plan");
 
-  // =========================
-  // SORT STATE
-  // =========================
+  
 
   const [sortBy, setSortBy] =
     useState<SortOption>("duration");
 
-  // =========================
-  // DONE WORKOUT STATE
-  // =========================
+ 
 
   const [doneWorkouts, setDoneWorkouts] =
     useState<number[]>([]);
 
-  // =========================
-  // TOTAL MINUTES
-  // =========================
+  
 
   const totalMinutes = workPlan.reduce(
     (total, workout) => total + workout.duration,
     0
   );
 
-  // =========================
-  // TOTAL CALORIES
-  // =========================
+ 
 
   const totalCalories = workPlan.reduce(
     (total, workout) =>
@@ -60,9 +50,7 @@ const MyPlanPage = () => {
     0
   );
 
-  // =========================
-  // SORT TODAY'S PLAN
-  // =========================
+  
 
   const sortedWorkPlan = useMemo(() => {
     return [...workPlan].sort((a, b) => {
@@ -82,9 +70,7 @@ const MyPlanPage = () => {
     });
   }, [workPlan, sortBy]);
 
-  // =========================
-  // SORT SAVED
-  // =========================
+  
 
   const sortedSaveWork = useMemo(() => {
     return [...saveWork].sort((a, b) => {
@@ -104,9 +90,7 @@ const MyPlanPage = () => {
     });
   }, [saveWork, sortBy]);
 
-  // =========================
-  // REMOVE FROM PLAN
-  // =========================
+  
 
   const handleRemoveFromPlan = (id: number) => {
     setWorkPlan((previous) =>
@@ -115,7 +99,7 @@ const MyPlanPage = () => {
       )
     );
 
-    // Done list থেকেও remove করে দিচ্ছি
+    
     setDoneWorkouts((previous) =>
       previous.filter((workoutId) => workoutId !== id)
     );
@@ -123,12 +107,10 @@ const MyPlanPage = () => {
     toast.success("Workout removed from your plan!");
   };
 
-  // =========================
-  // MARK AS DONE
-  // =========================
+  
 
   const handleMarkAsDone = (id: number) => {
-    // যদি আগে থেকেই done থাকে তাহলে আবার কিছু করবে না
+   
     if (doneWorkouts.includes(id)) {
       return;
     }
@@ -141,9 +123,6 @@ const MyPlanPage = () => {
     toast.success("Workout marked as done!");
   };
 
-  // =========================
-  // REMOVE FROM SAVED
-  // =========================
 
   const handleRemoveFromSaved = (id: number) => {
     setSaveWork((previous) =>
@@ -509,7 +488,7 @@ const MyPlanPage = () => {
                       </div>
 
 
-                      {/* BUTTONS */}
+                      
 
                       <div className="flex flex-wrap gap-2">
 

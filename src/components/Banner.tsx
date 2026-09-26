@@ -24,13 +24,14 @@ const Banner = () => {
             <p className="py-6 text-gray-300">FitLog is a dark, no-nonsense gym companion: pick a lift,
               lock it <br /> into today's plan, and watch the week's work add up.</p>
 
-            <a href="#library" className="btn bg-[#ccff00] text-black border-none">
+            <a href="#library" 
+            className="btn bg-[#ccff00] text-black border-none">
               BROWSE WORKOUTS
             </a>
 
             
           </div>
-          <div className="w-1/2 flex justify-end">
+          <div className="w-full lg:w-1/2 flex justify-end">
             <Image src={hero} alt="Banner Image"
           /></div>
 

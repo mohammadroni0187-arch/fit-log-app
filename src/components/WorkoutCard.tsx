@@ -1,6 +1,11 @@
+import { IWorkout } from '@/type/workout.type';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+
+interface workoutCardProps {
+  workout: IWorkout;
+}
 
 const WorkoutCard = ({workout}:workoutCardProps) => {
   return (

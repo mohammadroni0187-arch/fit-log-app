@@ -1,4 +1,5 @@
 
+import { notFound } from "next/navigation";
 import WorkoutActions from "@/components/WorkoutActions";
 import { IWorkout } from "@/type/workout.type";
 import Image from "next/image";
@@ -12,7 +13,7 @@ interface IWorkoutDetailsPage {
 
 const getWorkouts = async () => {
   const res = await fetch(
-    "https://api.abcz.workers.dev/api/fitlog"
+    "https://api.api-store.workers.dev/api/fitlog"
   );
 
   const data = await res.json();
@@ -32,13 +33,7 @@ const WorkoutsDetails = async ({
   );
 
   if (!workout) {
-    return (
-      <div className="min-h-[70vh] flex items-center justify-center">
-        <h2 className="text-2xl font-bold">
-          Workout not found
-        </h2>
-      </div>
-    );
+    notFound();
   }
 
   return (
